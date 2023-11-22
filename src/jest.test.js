@@ -3,7 +3,6 @@ import { capitalize } from "./capitalize.js";
 import { reverseString } from "./reverseString.js";
 import { calculate } from "./calculator.js";
 import expect from "expect";
-import exp from "constants";
 
 test('adds 1 + 2 to equal 3', () => {
     expect(sum(1,2)).toBe(3);
@@ -35,3 +34,4 @@ test('10 / 2 equals 5', () => {
 test('5 * 2 equals 10', () => {
     expect(calculate.multiply(5,2)).toBe(10);
 });
+
