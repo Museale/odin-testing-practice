@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watch",
-    "watch": "jest",
+    "watch": "webpack --watch",
     "build": "webpack"
   },
+
   "keywords": [],
   "author": "",
   "license": "ISC",

@@ -35,3 +35,8 @@ test('5 * 2 equals 10', () => {
     expect(calculate.multiply(5,2)).toBe(10);
 });
 
+test('Shifts alphabet 3 keys and returns the correct cipher', () => {
+    const string = 'Julius Caesar';
+    const cipheredString = caesarCipher(string, 3);
+    expect(cipheredString).toBe('mxolxv fdhvdu');
+}) 
