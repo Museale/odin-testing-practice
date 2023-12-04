@@ -17,16 +17,16 @@ export const caesarCipher = (string, n) => {
         const indexes = [];
 
         stringArr.forEach(letter => {
+      
             const toLowerCaseLetter = letter.toLowerCase();
             const pos = originalAlphabet.indexOf(toLowerCaseLetter);
             if(letter === ' ') {
-                indexes.push(' ');
+                indexes.push(null);
             }
             if(pos !== -1) {
                 indexes.push(pos);
             }
-            console.log(indexes)
-        })
+    })
         return indexes;
     };
   
@@ -36,18 +36,19 @@ export const caesarCipher = (string, n) => {
         const shiftedAlphabet = shiftTheAlphabet(n);
         
         indexes.forEach(pos => {
-            cipheredString.push(shiftedAlphabet[pos]);
-            if(pos === ' ') {
+            if(pos === null) {
                 cipheredString.push(' ');
-            };
+            } else {
+                 cipheredString.push(shiftedAlphabet[pos]);
+            }
         })
         return cipheredString.join('');
     }
+    const result = cipherString(string,n).toString();
 
-    return {
-       cipheredString: cipherString(string,n)
-    }
+    return result;
 };
+
 
 
 // find index of each letter in original alphabet - arr, map through shiftedalph and get each index 

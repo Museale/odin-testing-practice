@@ -2,6 +2,7 @@ import { sum } from "./sum.js";
 import { capitalize } from "./capitalize.js";
 import { reverseString } from "./reverseString.js";
 import { calculate } from "./calculator.js";
+import { caesarCipher } from "./caesarCipher.js";
 import expect from "expect";
 
 test('adds 1 + 2 to equal 3', () => {
