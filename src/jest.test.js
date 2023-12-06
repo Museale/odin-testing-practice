@@ -3,7 +3,8 @@ import { capitalize } from "./capitalize.js";
 import { reverseString } from "./reverseString.js";
 import { calculate } from "./calculator.js";
 import { caesarCipher } from "./caesarCipher.js";
-import expect from "expect";
+import { analyzeArray } from "./analyzeArray.js";
+
 
 test('adds 1 + 2 to equal 3', () => {
     expect(sum(1,2)).toBe(3);
@@ -40,4 +41,17 @@ test('Shifts alphabet 3 keys and returns the correct cipher', () => {
     const string = 'Julius Caesar';
     const cipheredString = caesarCipher(string, 3);
     expect(cipheredString).toBe('mxolxv fdhvdu');
-}) 
+});
+
+test('Analyze given array', () => {
+
+    const array = [1, 8, 3, 4, 2, 6];
+    const analyzedArray = analyzeArray(array);
+
+    expect(analyzedArray).toStrictEqual({
+        average: 4,
+        min: 1,
+        max: 8,
+        length: 6
+        });
+});
